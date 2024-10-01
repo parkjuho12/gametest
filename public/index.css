@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons a:hover {
+    background-color: #777;
+}
+
+/* 게임 카테고리 스타일 (둥근 네모) */
+nav {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a.category-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a.category-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #777;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #555;
+}
+
+h2 {
+    color: #fff;
+}
+
+.game-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-list li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.site-title a {
+    color: white; /* 링크 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}

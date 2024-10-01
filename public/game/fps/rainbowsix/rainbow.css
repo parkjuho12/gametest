@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+}
+.site-title a {
+    color: white; /* 링크 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+nav {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a.category-btn {
+    padding: 15px 25px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a.category-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #777;
+}
+
+main {
+    max-width: 800px; /* 최대 너비 설정 */
+    margin: 20px auto; /* 중앙 정렬 */
+    padding: 20px;
+    text-align: center; /* 내용 중앙 정렬 */
+}
+
+.a, .b {
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    margin: 20px 0; /* 섹션 간 여백 */
+}
+
+.a h2 {
+    font-size: 36px; /* 제목 크기 조정 */
+    margin: 10px 0; /* 여백 조정 */
+}
+
+.a p {
+    font-size: 18px; /* 본문 크기 조정 */
+    margin: 10px 0; /* 여백 조정 */
+}
+
+.course h3 {
+    font-size: 24px; /* 플레이 영상 제목 크기 */
+    margin-bottom: 10px; /* 여백 조정 */
+}
+
+video {
+    width: 100%; /* 비디오 너비 조정 */
+    max-width: 600px; /* 최대 비디오 너비 설정 */
+    border-radius: 10px; /* 모서리 둥글게 */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.game-link a {
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 사용 (원하는 경우) */
+}
+
+.game-link a:hover {
+    text-decoration: underline; /* 마우스를 올렸을 때 밑줄 추가 (원하는 경우) */
+}

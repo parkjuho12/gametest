@@ -1,0 +1,58 @@
+body {
+    background-color: #79c1e0; /* 배경색을 회색 또는 다른 색상으로 설정 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px; /* 제목과 폼 사이의 여백 설정 */
+}
+
+form {
+    background-color: #ffffff; /* 폼의 배경색을 흰색으로 설정 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+    width: 90%; /* 폼의 너비를 화면 너비의 90%로 설정 */
+    max-width: 400px; /* 폼의 최대 너비 설정 */
+    height: 300px; /* 폼의 높이를 300px로 설정 */
+    margin-bottom: 20px; /* 폼과 아래 요소 사이의 여백 설정 */
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 16px); /* 입력 필드의 너비를 조정하고, 패딩 고려 */
+    padding: 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <link rel="stylesheet" href="write.css">
+</head>
+<body>
+    <header>
+        <h1 class="site-title"><a href="../../public/home.html">게임 월드</a></h1>
+        <div id="userInfo" class="user-info">
+            <p id="userId"></p>
+        </div>
+        <div class ="auth-buttons">
+        <a href="../community/write.html" class="community-btn">커뮤니티</a>
+        <a href="/process/logout">로그아웃</a>
+    </div>
+</header>
+        <main>
+            <h2>커뮤니티 게시판</h2>
+            <table id="table"></table><br>
+
+            <!-- 글 작성 폼 -->
+            <section>
+                <h3>새 글 작성</h3>
+                <form id="postForm">
+                    <label for="title">제목:</label>
+                    <input type="text" id="title" name="title" required><br>
+                    <label for="content">내용:</label>
+                    <textarea id="content" name="content" required></textarea><br>
+                    <button type="submit">작성하기</button>
+                </form>
+            </section>
+
+            <footer id="footer">게임 추천 사이트</footer>
+        </main>
+
+
+    <script src = "community.js"></script>
+    </body>
+    </html>

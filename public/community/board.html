@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 상세보기</title>
+    <link rel ="stylesheet"  href = "comments.css">
+    
+</head>
+<body>
+    <header>
+        <h1 class="site-title"><a href="../../public/home.html">게임 월드</a></h1>
+        <div id="userId"></div>
+    </header>
+    <main>
+        <section id="postDetails">
+            
+            <h2 id="postTitle">제목</h2>
+            <p id="postContent">내용</p>
+        </section>
+
+        <section>
+        <div id="postDetails"></div>
+        <h2>댓글</h2>
+        <ul id="commentsList"></ul>
+
+        <form id="commentForm">
+            <textarea id="commentContent" placeholder="댓글을 작성하세요..." required></textarea><br>
+            <button type="submit">댓글 작성</button>
+        </form>
+    </main>
+
+    <script src="comments.js"></script>
+</body>
+</html>
