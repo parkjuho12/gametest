@@ -43,7 +43,7 @@ app.use(session({
 }));
 
 app.post('/process/adduser', (req, res) => {
-    const paramEmail =req.body.email;
+    const paramEmail = req.body.email;
     const paramId = req.body.id;
     const paramPassword = req.body.password;
     const paramName = req.body.name;
@@ -52,15 +52,15 @@ app.post('/process/adduser', (req, res) => {
     pool.getConnection((err, conn) => {
         if (err) {
             console.log('MySQL getConnection 오류 발생, 연결 종료');
-            return res.status(500).send('<h1>회원가입 실패</h1>');
-        }
+            return res.redirect('/public/auth/adduser.html?error=회원가입 실패'); // 에러 메시지 쿼리 파라미터 추가
+                }
 
         // 비밀번호 해싱
         bcrypt.hash(paramPassword, 10, (err, hash) => {
             if (err) {
                 console.error('비밀번호 해싱 오류 발생:', err);
                 conn.release(); // 연결 해제
-                return res.status(500).send('<h1>회원가입 실패</h1>');
+                return res.redirect('/public/auth/adduser.html'); // 실패 시 리디렉션
             }
 
             conn.query(
@@ -72,7 +72,7 @@ app.post('/process/adduser', (req, res) => {
                     if (err) {
                         console.log('SQL 실행 오류 발생');
                         console.error(err);
-                        return res.status(500).send('<h1>회원가입 실패</h1>');
+                        return res.redirect('/public/auth/adduser.html'); // 실패 시 리디렉션
                     }
 
                     console.log('회원가입 성공');
