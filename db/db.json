@@ -1,6 +1,6 @@
 {
-    "host" : "pjh.kbu.kr",
-    "user" : "kbu",
-    "password" : "qkrwngh2350@",
-    "database" : "SELF"
+    "host" : "서버 주소",
+    "user" : "mariadb 유저이름",
+    "password" : "비밀번호",
+    "database" : "db이름"
 }

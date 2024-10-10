@@ -90,7 +90,6 @@ h2 {
     color: #fff;
     
 }
-
 .game-list {
     list-style-type: none;
     padding: 0;
@@ -117,12 +116,15 @@ h2 {
 .game-list a:hover {
     text-decoration: underline; /* 마우스를 올렸을 때 밑줄 추가 (원하는 경우) */
 }
-
 .game-list img {
-    width: 300px; /* 이미지 크기 조정 (필요에 따라 조정) */
-    height: 200px; /* 비율 유지 */
+    width: 400px; /* 고정 너비 (더 길게) */
+    height: 200px; /* 고정 높이 (짧게) */
+    object-fit: contain; /* 비율 유지하며 이미지가 잘리지 않도록 설정 */
     margin-bottom: 5px; /* 이미지와 텍스트 간의 간격 */
 }
+
+
+
 
 footer {
     text-align: center;

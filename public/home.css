@@ -88,18 +88,83 @@ section {
     background-color: #555;
 }
 
+
 h2 {
     color: #fff;
 }
+html, body {height: 100%}
+#bannerimage {
+    width: 100%; /* 전체 너비 */
+    height: 300px; /* 고정 높이 설정 */
+    overflow: hidden; /* 이미지가 넘치는 경우 숨김 */
+    position: relative;
+}
+
+#bannerimage img {
+    width: 100%; /* 배너의 너비에 맞춤 */
+    height: 100%; /* 배너의 높이에 맞춤 */
+    object-fit: cover; /* 이미지를 배너를 꽉 채우도록 설정 */
+    display: block; /* 이미지 주위의 여백 제거 */
+}
+#game-ranking {
+    padding: 20px;
+    background-color: #444;
+    color: #fff;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.game-ranking-container {
+    display: flex; /* Flexbox 사용 */
+    justify-content: left; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 수직 정렬 (필요에 따라 조정) */
+    gap: 40px; /* 섹션 간격 */
+}
+
+.ranking-section {
+    flex: 1; /* 각 섹션을 같은 비율로 분배 */
+    max-width: 250px; /* 최대 너비 조정 */
+}
 
 .game-list {
-    list-style-type: none;
-    padding: 0;
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로로 나열 */
+    gap: 15px; /* 아이템 간격 */
 }
 
-.game-list li {
-    margin-bottom: 10px;
+.game-item a {
+    display: block; /* 링크를 블록 요소로 설정 */
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none; /* 밑줄 제거 */
+    transition: background-color 0.3s;
+    text-align: center; /* 중앙 정렬 */
 }
+
+.game-item a:hover {
+    background-color: #777;
+}
+
+.recommend-section {
+    display: flex;
+    flex-direction: column; /* 세로로 나열 */
+    align-items: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 위쪽 여백 추가 */  
+    margin-left: auto; /* 왼쪽 여백 자동으로 설정하여 오른쪽으로 이동 */
+    margin-right: 300px; /* 오른쪽 여백 추가 */
+    font-family: 'Noto Sans KR', sans-serif; /* 폰트 적용 */
+    color: #fff; /* 텍스트 색상 */
+    
+}
+
+
+.recommend-section p {
+    font-size: 20px; /* 텍스트 크기 조정 */
+    margin: 0; /* 여백 제거 */
+    text-align: center; /* 중앙 정렬 */
+    
+}
+
 
 footer {
     text-align: center;

@@ -18,10 +18,12 @@ h1 {
     margin: 0;
     font-size: 48px;
 }
+
 .site-title a {
     color: white; /* 링크 텍스트 색상 */
     text-decoration: none; /* 밑줄 제거 */
 }
+
 nav {
     background-color: #444;
     padding: 20px;
@@ -42,54 +44,137 @@ nav ul li {
 }
 
 nav ul li a.category-btn {
+    display: inline-block;
     padding: 15px 25px;
     background-color: #555;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
 }
 
 nav ul li a.category-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* 마우스 오버 시 살짝 위로 이동 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 그림자 깊이 변경 */
     background-color: #777;
 }
 
+/* 메인 컨테이너 스타일 */
 main {
-    max-width: 800px; /* 최대 너비 설정 */
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 배치 */
+    max-width: 1000px; /* 최대 너비 */
     margin: 20px auto; /* 중앙 정렬 */
-    padding: 20px;
-    text-align: center; /* 내용 중앙 정렬 */
+    gap: 20px; /* 섹션 간격 */
 }
 
-.a, .b {
-    display: flex; /* Flexbox 사용 */
-    flex-direction: column; /* 세로 방향 정렬 */
-    align-items: center; /* 중앙 정렬 */
-    margin: 20px 0; /* 섹션 간 여백 */
+aside.side-category {
+    background-color: #444;
+    padding: 30px;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+}
+
+aside.side-category h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+aside.side-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside.side-category ul li {
+    margin: 10px 0;
+}
+
+aside.side-category ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+aside.side-category ul li a:hover {
+    background-color: #555;
+}
+
+/* .a 섹션: 게임 설명 */
+.a {
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
 }
 
 .a h2 {
-    font-size: 36px; /* 제목 크기 조정 */
-    margin: 10px 0; /* 여백 조정 */
+    font-size: 36px;
+    margin: 10px 0;
 }
 
 .a p {
-    font-size: 18px; /* 본문 크기 조정 */
-    margin: 10px 0; /* 여백 조정 */
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: justify;
+    line-height: 1.6; /* 가독성 향상을 위한 줄 간격 */
+}
+
+/* .b 섹션: 플레이 영상 */
+.b {
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
 }
 
 .course h3 {
-    font-size: 24px; /* 플레이 영상 제목 크기 */
-    margin-bottom: 10px; /* 여백 조정 */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+video {
+    width: 100%; /* 비디오를 전체 너비로 맞춤 */
+    max-width: 600px; /* 비디오의 최대 너비 설정 */
+    border-radius: 10px;
+}   
+/* game-link 스타일 */
+.game-link {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
-video {
-    width: 100%; /* 비디오 너비 조정 */
-    max-width: 600px; /* 최대 비디오 너비 설정 */
-    border-radius: 10px; /* 모서리 둥글게 */
+.game-link li {
+    margin: 0 10px;
+}
+
+.game-link a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #555;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-link a:hover {
+    background-color: #777;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 footer {
@@ -100,11 +185,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.game-link a {
-    text-decoration: none; /* 링크의 밑줄 제거 */
-    color: inherit; /* 부모 요소의 색상 사용 (원하는 경우) */
-}
-
-.game-link a:hover {
-    text-decoration: underline; /* 마우스를 올렸을 때 밑줄 추가 (원하는 경우) */
+.container {
+    display: flex; /* Flexbox를 사용해 aside와 main을 가로로 나란히 배치 */
+    gap: 20px; /* aside와 main 간의 간격 */
+    max-width: 1200px; /* 전체 컨테이너의 최대 너비 */
+    margin: 0; /* 사이드바를 왼쪽에 붙임 */
 }
